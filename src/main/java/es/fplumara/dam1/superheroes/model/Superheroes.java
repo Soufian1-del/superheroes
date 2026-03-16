@@ -14,4 +14,19 @@ public class Superheroes {
     private String apodo;
     private Franquicia franquicia;
     private String poder;
+
+    public void validations(){
+        if(this.getNombre()==null || this.getNombre().isBlank()){
+            throw new RuntimeException("Please, insert a valid hero name");
+        }
+        if(this.getApodo()==null || this.getApodo().isBlank()){
+            throw new RuntimeException("Please, insert a valid hero Alias");
+        }
+        if(this.getFranquicia()==null){
+            throw new RuntimeException("Please, insert a valid hero franchise");
+        }
+        if(this.getPoder()==null || this.getPoder().isBlank()){
+            throw new RuntimeException("Please, insert a valid hero power");
+        }
+    }
 }
