@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Equipos</title>
+</head>
+<body>
+<h1>Listado de heroes</h1>
+<table border="1">
+    <tr>
+        <th>Nombre</th>
+        <th>Poder</th>
+    </tr>
+    <tr th:each="SuperHeroes : ${SuperHeroes}">
+        <td th:text="${SuperHeroes.nombre}">Nombre equipo</td>
+        <td th:text="${SuperHeroes.poder}">Poder</td>
+    </tr>
+</table>
+</body>
+</html>

@@ -19,12 +19,18 @@ public class SuperheroController {
     @PostMapping("/Superheroes/guardar")
     public String saveHero(@ModelAttribute Superheroes superheroe, Model model) {
         model.addAttribute("Hero saved", superheroe);
-        return "Hero saved";
+        return "SaveHero";
+    }
+
+    @GetMapping("/Superheroes/guardar")
+    public String saveHeroGET(@ModelAttribute Superheroes superheroe, Model model) {
+        model.addAttribute("Hero saved", superheroe);
+        return "SaveHero";
     }
 
     @GetMapping("/Superheroes/{nombre}")
     public String listadoHeroes(Model model, @PathVariable("nombre") String nombre) {
         model.addAttribute("title","hero list, name: "+ nombre);
-        return  "listadoHeroes";
+        return  "ListadoHeroes";
     }
 }
