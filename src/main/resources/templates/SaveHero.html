@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>NEW HERO</title>
+</head>
+<body>
+<h1>Hero form</h1>
+
+<form th:action="@{/Superheroes/guardar}" th:object="${superheroe}" method="post">
+    <div>
+        <label for="nombre">nombre:</label>
+        <input type="text" id="nombre" th:field="*{nombre}">
+    </div>
+
+    <div>
+        <label for="poder">poder:</label>
+        <input type="text" id="poder" th:field="*{poder}">
+    </div>
+
+    <div>
+        <label for="franquicia">franquicia:</label>
+        <input type="text" id="franquicia" th:field="*{franquicia}">
+    </div>
+
+    <div>
+        <button type="submit">Guardar</button>
+    </div>
+</form>
+</body>
+</html>
